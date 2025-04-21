@@ -3,24 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
+    <title>GameQuest - Video Game Quiz</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
+    <canvas id="bg"></canvas>
     <div class="container">
         <div id="quiz">
-            <h1>Quiz App</h1>
+            <div class="logo">
+                <h1>Game<span>Quest</span></h1>
+                <p class="tagline">Test Your Gaming Knowledge</p>
+            </div>
             <div id="quiz-header">
-                <p id="progress">Question <span id="current">1</span> of <span id="total">10</span></p>
-                <p id="score">Score: <span id="score-value">0</span></p>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <p id="progress">Question <span id="current">1</span> of <span id="total">10</span></p>
+                </div>
+                <div class="score-container">
+                    <i class="fas fa-trophy"></i>
+                    <p id="score">Score: <span id="score-value">0</span></p>
+                </div>
             </div>
-            <h2 id="question">Question text</h2>
-            <div id="choices" class="choices">
-                <!-- Choices will be inserted here -->
+            <div class="question-container">
+                <h2 id="question">Question text</h2>
+                <div id="choices" class="choices">
+                    <!-- Choices will be inserted here -->
+                </div>
             </div>
-            <button id="next" class="btn">Next Question</button>
-            <button id="restart" class="btn" style="display: none;">Restart Quiz</button>
+            <div class="button-container">
+                <button id="next" class="btn">Next Question</button>
+                <button id="restart" class="btn" style="display: none;">Play Again</button>
+            </div>
             <div id="share-buttons" class="share-buttons" style="display: none;">
                 <h3>Share your score!</h3>
                 <div class="social-buttons">
@@ -34,6 +51,7 @@
             </div>
         </div>
     </div>
+    <script src="background.js"></script>
     <script src="script.js"></script>
 </body>
 </html> 

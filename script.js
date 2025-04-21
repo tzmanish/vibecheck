@@ -10,6 +10,7 @@ const scoreElement = document.getElementById('score-value');
 const shareButtons = document.getElementById('share-buttons');
 const twitterShareButton = document.getElementById('twitter-share');
 const facebookShareButton = document.getElementById('facebook-share');
+const progressFill = document.querySelector('.progress-fill');
 
 // Quiz state
 let currentQuestion = 0;
@@ -99,6 +100,10 @@ function selectChoice(choice) {
 function updateProgress() {
     currentQuestionElement.textContent = currentQuestion + 1;
     totalQuestionsElement.textContent = TOTAL_QUESTIONS;
+    
+    // Update progress bar
+    const progressPercentage = ((currentQuestion + 1) / TOTAL_QUESTIONS) * 100;
+    progressFill.style.width = `${progressPercentage}%`;
 }
 
 // Update score display
@@ -131,7 +136,7 @@ function showResults() {
 
 // Setup social media sharing
 function setupSharingButtons() {
-    const shareText = `I scored ${score}/${TOTAL_QUESTIONS} on the Video Games Quiz! Can you beat my score? 🎮`;
+    const shareText = `I scored ${score}/${TOTAL_QUESTIONS} on GameQuest - The Video Game Quiz! Can you beat my score? 🎮`;
     const shareUrl = window.location.href;
 
     // Twitter share
