@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div id="quiz">
+            <h1>Quiz App</h1>
+            <div id="quiz-header">
+                <p id="progress">Question <span id="current">1</span> of <span id="total">10</span></p>
+                <p id="score">Score: <span id="score-value">0</span></p>
+            </div>
+            <h2 id="question">Question text</h2>
+            <div id="choices" class="choices">
+                <!-- Choices will be inserted here -->
+            </div>
+            <button id="next" class="btn">Next Question</button>
+            <button id="restart" class="btn" style="display: none;">Restart Quiz</button>
+            <div id="share-buttons" class="share-buttons" style="display: none;">
+                <h3>Share your score!</h3>
+                <div class="social-buttons">
+                    <button id="twitter-share" class="social-btn twitter">
+                        <i class="fab fa-twitter"></i> Share on Twitter
+                    </button>
+                    <button id="facebook-share" class="social-btn facebook">
+                        <i class="fab fa-facebook"></i> Share on Facebook
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
