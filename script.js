@@ -22,7 +22,7 @@ const TOTAL_QUESTIONS = 10;
 async function fetchQuestions() {
     try {
         // Using category 15 for Video Games
-        const response = await fetch(`https://opentdb.com/api.php?amount=${TOTAL_QUESTIONS}&category=15&type=multiple`);
+        const response = await fetch(`https://opentdb.com/api.php?amount=${TOTAL_QUESTIONS}&category=15&type=multiple&difficulty=easy`);
         const data = await response.json();
         questions = data.results.map(question => {
             return {
